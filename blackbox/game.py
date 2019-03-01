@@ -9,6 +9,7 @@ class Game:
         self._size_x = size_x
         self._size_y = size_y
         self.table = Table(size_x,size_y)
+        self.put_mirors()
 
 
     # Provisional process to see the table how it works
@@ -21,8 +22,9 @@ class Game:
         while i < self._mirors:
             coordenate_x = randint(0, self._size_x - 1)
             coordenate_y = randint(0, self._size_y - 1)
-            if self.table.get_element(coordenate_y,coordenate_x) != '*':
-                self.table.add_element(coordenate_y,coordenate_x, '*')
+            print (coordenate_x)
+            print (coordenate_y)
+            if self.table.get_element(coordenate_y,coordenate_x) != 1:
+                self.table.add_element(coordenate_y,coordenate_x, 1)
                 i+=1
-            else:
-                pass
+            
